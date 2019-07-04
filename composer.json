@@ -1,0 +1,24 @@
+{
+    "name": "phalapi/alipay",
+    "description": "支付宝支付基于支付宝api2",
+    "type": "library",
+    "keywords": [
+        "phalapi", "phalapi-alipay", "alipay", "支付宝", "支付"
+    ],
+    "license": "GPL-3.0+",
+    "minimum-stability": "dev",
+    "homepage": "http://gong.gg/",
+    "authors": [
+        {
+            "name": "Devil",
+            "email": "fuxiang.gong@qq.com",
+            "homepage": "ttp://gong.gg/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PhalApi\\Alipay\\": "src"
+        }
+    } 
+}

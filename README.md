@@ -6,7 +6,7 @@
 ## 安装和配置
 修改项目下的composer.json文件，并添加：  
 ```
-    "phalapi/alipay":"dev-master"
+    "shopxo/phalapi2-alipay": "dev-master"
 ```
 然后执行```composer update```。  
 

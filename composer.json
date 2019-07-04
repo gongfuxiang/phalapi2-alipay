@@ -1,5 +1,5 @@
 {
-    "name": "devil/phalapi2-alipay",
+    "name": "gongfuxiang/phalapi2-alipay",
     "description": "支付宝支付基于支付宝api2.0",
     "type": "library",
     "keywords": [

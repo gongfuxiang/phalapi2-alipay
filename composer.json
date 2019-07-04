@@ -1,6 +1,6 @@
 {
-    "name": "phalapi/alipay",
-    "description": "支付宝支付基于支付宝api2",
+    "name": "devil/alipay",
+    "description": "支付宝支付基于支付宝api2.0",
     "type": "library",
     "keywords": [
         "phalapi", "phalapi-alipay", "alipay", "支付宝", "支付"

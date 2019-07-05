@@ -163,6 +163,7 @@ class Lite
             'subject'               =>  $this->params['subject'],
             'out_trade_no'          =>  $this->params['order_no'],
             'total_amount'          =>  $this->params['total_amount'],
+            'body'                  =>  empty($this->params['body']) ? '' : $this->params['body'],
         ];
     }
 
@@ -199,7 +200,7 @@ class Lite
 
         // 生成签名
         $this->SetParamSign();
-        //return $this->pay_params;
+
         // 输出执行form表单post提交
         $this->BuildRequestForm();
     }
@@ -225,7 +226,7 @@ class Lite
         $i = 0;
         foreach($this->pay_params as $k=>$v)
         {
-            if(!empty($v) && "@" != substr($v, 0, 1))
+            if($v != '' && $v != null && "@" != substr($v, 0, 1))
             {
                 if($i == 0)
                 {
@@ -410,7 +411,7 @@ class Lite
         ksort($this->pay_params);
         foreach($this->pay_params AS $key=>$val)
         {
-            if(!empty($val) && substr($val, 0, 1) != '@')
+            if($val != '' && $val != null && substr($val, 0, 1) != '@')
             {
                 $value .= "$key=$val&";
             }

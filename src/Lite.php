@@ -337,6 +337,14 @@ class Lite
     public function Respond($params = [])
     {
         $data = empty($_POST) ? $_GET :  array_merge($_GET, $_POST);
+        if(empty($data))
+        {
+            throw new Exception('支付信息为空', 400);
+        }
+        if(empty($data['sign']))
+        {
+            throw new Exception('签名为空', 400);
+        }
         ksort($data);
 
         // 参数字符串
@@ -366,7 +374,7 @@ class Lite
                 return $this->ReturnData($data);
                 break;
         }
-        throw new Exception('处理异常错误', 400);
+        throw new Exception('支付信息校验失败', 400);
     }
 
     /**

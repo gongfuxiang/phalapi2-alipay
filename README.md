@@ -19,7 +19,7 @@ $di->alipay = function() {
 ```
 
 ## 使用
-第一种使用方式：直接输出二维码图片：
+发起支付
 ```php
 \PhalApi\DI()->alipay->Pay();
 ```

@@ -381,14 +381,14 @@ class Lite
     {
         // 兼容web版本支付参数
         $buyer_user = isset($data['buyer_logon_id']) ? $data['buyer_logon_id'] : (isset($data['buyer_email']) ? $data['buyer_email'] : '');
-        $pay_price = isset($data['total_amount']) ? $data['total_amount'] : (isset($data['total_fee']) ? $data['total_fee'] : '');
+        $pay_amount = isset($data['total_amount']) ? $data['total_amount'] : (isset($data['total_fee']) ? $data['total_fee'] : '');
 
         // 返回数据固定基础参数
         $data['trade_no']       = $data['trade_no'];        // 支付平台 - 订单号
         $data['buyer_user']     = $buyer_user;              // 支付平台 - 用户
         $data['out_trade_no']   = $data['out_trade_no'];    // 本系统发起支付的 - 订单号
         $data['subject']        = $data['subject'];         // 本系统发起支付的 - 商品名称
-        $data['pay_price']      = $pay_price;               // 本系统发起支付的 - 总价
+        $data['pay_amount']     = $pay_amount;              // 本系统发起支付的 - 总价
 
         return $data;
     }
